@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-generate_banners.py - Generate high-fidelity Star Trek LCARS profile banners
-for both dark and light modes.
+generate_banners.py - Generate high-end, professional Star Trek LCARS profile banners
+designed for quantitative Data Science & Operations Research recruitment.
 """
 
 from pathlib import Path
@@ -9,201 +9,188 @@ from pathlib import Path
 def generate_banner(theme: str) -> str:
     is_dark = theme == "dark"
 
-    # Color tokens
-    bg_gradient_start = "#06080F" if is_dark else "#F8FAFC"
-    bg_gradient_end = "#0D1322" if is_dark else "#E2E8F0"
+    # Refined professional color palette
+    bg_gradient_start = "#080B11" if is_dark else "#F8FAFC"
+    bg_gradient_end = "#0F172A" if is_dark else "#EDF2F7"
     
-    lcars_amber = "#FF9900" if is_dark else "#D97706"
-    lcars_orange = "#FF6600" if is_dark else "#EA580C"
+    lcars_amber = "#F59E0B" if is_dark else "#D97706"
+    lcars_orange = "#EA580C" if is_dark else "#C2410C"
     lcars_cyan = "#38BDF8" if is_dark else "#0284C7"
     lcars_blue = "#60A5FA" if is_dark else "#2563EB"
-    lcars_magenta = "#CC6699" if is_dark else "#A21CAF"
-    lcars_gold = "#FFCC00" if is_dark else "#CA8A04"
+    lcars_purple = "#8B5CF6" if is_dark else "#7C3AED"
+    lcars_gold = "#FBBF24" if is_dark else "#B45309"
     
-    text_primary = "#FFFFFF" if is_dark else "#0F172A"
+    text_primary = "#F8FAFC" if is_dark else "#0F172A"
     text_secondary = "#94A3B8" if is_dark else "#475569"
     text_accent = "#38BDF8" if is_dark else "#0284C7"
     border_color = "#1E293B" if is_dark else "#CBD5E1"
-    grid_color = "#152033" if is_dark else "#E2E8F0"
-    star_color = "#FFFFFF" if is_dark else "#94A3B8"
-    star_opacity = "0.6" if is_dark else "0.3"
+    grid_color = "#151F33" if is_dark else "#E2E8F0"
     
-    tag_bg = "rgba(56, 189, 248, 0.12)" if is_dark else "rgba(2, 132, 199, 0.1)"
-    tag_border = "rgba(56, 189, 248, 0.35)" if is_dark else "rgba(2, 132, 199, 0.3)"
-    tag_text = "#7DD3FC" if is_dark else "#0369A1"
+    pill_bg = "rgba(56, 189, 248, 0.08)" if is_dark else "rgba(2, 132, 199, 0.08)"
+    pill_border = "rgba(56, 189, 248, 0.3)" if is_dark else "rgba(2, 132, 199, 0.25)"
+    pill_text = "#7DD3FC" if is_dark else "#0369A1"
 
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" width="1000" height="320" role="img" aria-label="Sebastián Ayala - Star Trek LCARS Banner">
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" width="1000" height="320" role="img" aria-label="Sebastián Ayala - Professional LCARS Data Science Banner">
   <defs>
     <linearGradient id="bg-grad-{theme}" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="{bg_gradient_start}"/>
       <stop offset="100%" stop-color="{bg_gradient_end}"/>
     </linearGradient>
-    
-    <linearGradient id="lcars-flow-{theme}" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="{lcars_amber}"/>
-      <stop offset="40%" stop-color="{lcars_orange}"/>
-      <stop offset="70%" stop-color="{lcars_magenta}"/>
-      <stop offset="100%" stop-color="{lcars_cyan}"/>
-    </linearGradient>
 
     <linearGradient id="delta-grad-{theme}" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="{lcars_gold}" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="{lcars_amber}" stop-opacity="0.4"/>
+      <stop offset="0%" stop-color="{lcars_gold}" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="{lcars_amber}" stop-opacity="0.35"/>
     </linearGradient>
 
-    <filter id="glow-{theme}" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
+    <pattern id="grid-pat-{theme}" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="{grid_color}" stroke-width="0.75" stroke-dasharray="2,4"/>
+    </pattern>
+
+    <filter id="soft-glow-{theme}" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    
-    <pattern id="grid-pat-{theme}" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="{grid_color}" stroke-width="0.8" stroke-dasharray="2,4"/>
-    </pattern>
   </defs>
 
-  <!-- Outer Rounded Shell -->
-  <rect width="1000" height="320" rx="16" fill="url(#bg-grad-{theme})"/>
-  <rect width="1000" height="320" rx="16" fill="url(#grid-pat-{theme})" opacity="0.6"/>
-  <rect x="1" y="1" width="998" height="318" rx="15" fill="none" stroke="{border_color}" stroke-width="1.5"/>
+  <!-- Background Canvas -->
+  <rect width="1000" height="320" rx="14" fill="url(#bg-grad-{theme})"/>
+  <rect width="1000" height="320" rx="14" fill="url(#grid-pat-{theme})" opacity="0.6"/>
+  <rect x="1" y="1" width="998" height="318" rx="13" fill="none" stroke="{border_color}" stroke-width="1.2"/>
 
-  <!-- Starfleet Sensor Grid & Starfield Dots -->
-  <g opacity="{star_opacity}">
-    <circle cx="280" cy="65" r="1.2" fill="{star_color}"/>
-    <circle cx="340" cy="140" r="1" fill="{star_color}"/>
-    <circle cx="490" cy="50" r="1.5" fill="{star_color}"/>
-    <circle cx="580" cy="190" r="1" fill="{star_color}"/>
-    <circle cx="720" cy="85" r="1.8" fill="{star_color}"/>
-    <circle cx="810" cy="160" r="1.2" fill="{star_color}"/>
-    <circle cx="890" cy="95" r="1" fill="{star_color}"/>
-    <circle cx="940" cy="220" r="1.4" fill="{star_color}"/>
-    <circle cx="650" cy="110" r="1" fill="{star_color}"/>
-    <circle cx="420" cy="240" r="1.2" fill="{star_color}"/>
+  <!-- Subtle Mathematical Coordinate Axes in Background -->
+  <g opacity="{0.4 if is_dark else 0.2}">
+    <line x1="720" y1="50" x2="950" y2="50" stroke="{lcars_cyan}" stroke-width="1" stroke-dasharray="4,4"/>
+    <line x1="720" y1="270" x2="950" y2="270" stroke="{lcars_cyan}" stroke-width="1" stroke-dasharray="4,4"/>
+    <line x1="720" y1="50" x2="720" y2="270" stroke="{lcars_cyan}" stroke-width="1" stroke-dasharray="4,4"/>
   </g>
 
   <!-- ================= LCARS ARCHITECTURAL FRAMEWORK ================= -->
-  
-  <!-- Top Horizontal Header LCARS Bar -->
-  <path d="M 170 20 L 760 20 A 10 10 0 0 1 770 30 L 770 42 A 6 6 0 0 1 764 48 L 170 48 Z" fill="{lcars_amber}"/>
-  
-  <!-- Left Classic LCARS Elbow Bracket (Top-to-Side) -->
-  <path d="M 30 75 
-           A 35 35 0 0 1 65 40 
-           L 155 40 
-           L 155 48 
-           L 75 48 
-           A 25 25 0 0 0 50 73 
-           L 50 245 
-           A 25 25 0 0 0 75 270 
-           L 155 270 
-           L 155 278 
-           L 65 278 
-           A 35 35 0 0 1 30 243 
+
+  <!-- Top Horizontal LCARS Header Bar -->
+  <path d="M 160 18 L 730 18 A 8 8 0 0 1 738 26 L 738 40 A 6 6 0 0 1 732 46 L 160 46 Z" fill="{lcars_amber}"/>
+
+  <!-- Left Classic LCARS Elbow Bracket (Continuous L-Frame) -->
+  <path d="M 28 68 
+           A 32 32 0 0 1 60 36 
+           L 148 36 
+           L 148 44 
+           L 70 44 
+           A 22 22 0 0 0 48 66 
+           L 48 252 
+           A 22 22 0 0 0 70 274 
+           L 148 274 
+           L 148 282 
+           L 60 282 
+           A 32 32 0 0 1 28 250 
            Z" fill="{lcars_amber}"/>
 
   <!-- Top Segmented LCARS Header Blocks -->
-  <rect x="780" y="20" width="70" height="28" rx="4" fill="{lcars_orange}"/>
-  <rect x="858" y="20" width="60" height="28" rx="4" fill="{lcars_magenta}"/>
-  <rect x="926" y="20" width="44" height="28" rx="4" fill="{lcars_cyan}"/>
+  <rect x="748" y="18" width="75" height="28" rx="4" fill="{lcars_orange}"/>
+  <rect x="831" y="18" width="85" height="28" rx="4" fill="{lcars_purple}"/>
+  <rect x="924" y="18" width="48" height="28" rx="4" fill="{lcars_cyan}"/>
 
-  <!-- LCARS Code Pill Cuts inside Top Bar -->
-  <text x="180" y="38" font-family="monospace" font-size="12" font-weight="800" fill="#000000" letter-spacing="1.5">LCARS-4701</text>
-  <text x="310" y="38" font-family="monospace" font-size="11" font-weight="700" fill="#000000" letter-spacing="1">FEDERATION SCIENCE &amp; ANALYTICS DIRECTORY</text>
-  <text x="790" y="38" font-family="monospace" font-size="10.5" font-weight="700" fill="#000000">SEC-001</text>
-  <text x="866" y="38" font-family="monospace" font-size="10.5" font-weight="700" fill="#000000">OR-DIV</text>
-  <text x="933" y="38" font-family="monospace" font-size="10.5" font-weight="700" fill="#000000">DS-9</text>
+  <!-- Top Bar Monospace Text Elements -->
+  <text x="172" y="36" font-family="ui-monospace, monospace" font-size="12" font-weight="800" fill="#000000" letter-spacing="1.5">LCARS-SYS-4701</text>
+  <text x="312" y="36" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#000000" letter-spacing="1">QUANTITATIVE MODELING &amp; OPERATIONS RESEARCH</text>
+  <text x="758" y="36" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700" fill="#000000">OR-DEPT</text>
+  <text x="842" y="36" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700" fill="#000000">PHYS-MODEL</text>
+  <text x="933" y="36" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700" fill="#000000">MILP</text>
 
-  <!-- Left Spine Navigation Tactile Blocks -->
-  <rect x="30" y="90" width="70" height="30" rx="6" fill="{lcars_cyan}"/>
-  <text x="40" y="110" font-family="monospace" font-size="11" font-weight="700" fill="#000000">01 // OR</text>
+  <!-- Left Spine Navigation Blocks -->
+  <rect x="28" y="84" width="72" height="28" rx="4" fill="{lcars_cyan}"/>
+  <text x="36" y="103" font-family="ui-monospace, monospace" font-size="10" font-weight="800" fill="#000000">01 // MILP</text>
 
-  <rect x="30" y="128" width="70" height="30" rx="6" fill="{lcars_magenta}"/>
-  <text x="40" y="148" font-family="monospace" font-size="11" font-weight="700" fill="#000000">02 // PHYS</text>
+  <rect x="28" y="120" width="72" height="28" rx="4" fill="{lcars_purple}"/>
+  <text x="36" y="139" font-family="ui-monospace, monospace" font-size="10" font-weight="800" fill="#000000">02 // PHYS</text>
 
-  <rect x="30" y="166" width="70" height="30" rx="6" fill="{lcars_orange}"/>
-  <text x="40" y="186" font-family="monospace" font-size="11" font-weight="700" fill="#000000">03 // MILP</text>
+  <rect x="28" y="156" width="72" height="28" rx="4" fill="{lcars_orange}"/>
+  <text x="36" y="175" font-family="ui-monospace, monospace" font-size="10" font-weight="800" fill="#000000">03 // STAT</text>
 
-  <rect x="30" y="204" width="70" height="30" rx="6" fill="{lcars_gold}"/>
-  <text x="40" y="224" font-family="monospace" font-size="11" font-weight="700" fill="#000000">04 // ML</text>
+  <rect x="28" y="192" width="72" height="28" rx="4" fill="{lcars_gold}"/>
+  <text x="36" y="211" font-family="ui-monospace, monospace" font-size="10" font-weight="800" fill="#000000">04 // PROD</text>
 
   <!-- Bottom LCARS Horizontal Tray -->
-  <path d="M 170 270 L 680 270 A 10 10 0 0 1 690 280 L 690 292 A 6 6 0 0 1 684 298 L 170 298 Z" fill="{lcars_cyan}"/>
-  <rect x="700" y="270" width="130" height="28" rx="4" fill="{lcars_magenta}"/>
-  <rect x="838" y="270" width="132" height="28" rx="4" fill="{lcars_amber}"/>
+  <path d="M 160 274 L 660 274 A 8 8 0 0 1 668 282 L 668 296 A 6 6 0 0 1 662 302 L 160 302 Z" fill="{lcars_cyan}"/>
+  <rect x="678" y="274" width="144" height="28" rx="4" fill="{lcars_purple}"/>
+  <rect x="830" y="274" width="142" height="28" rx="4" fill="{lcars_amber}"/>
 
-  <text x="180" y="288" font-family="monospace" font-size="11" font-weight="700" fill="#000000" letter-spacing="1">STARDATE: 78432.9 // OPTICAL DATA NETWORK: ONLINE</text>
-  <text x="710" y="288" font-family="monospace" font-size="10.5" font-weight="700" fill="#000000">WARP FACTOR: 9.8</text>
-  <text x="846" y="288" font-family="monospace" font-size="10.5" font-weight="700" fill="#000000">STATUS: COMBAT READY</text>
+  <text x="172" y="292" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700" fill="#000000" letter-spacing="1">SYSTEM SPEC: SA-704-PHYS // OPTICAL DATA NETWORK: NOMINAL</text>
+  <text x="688" y="292" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700" fill="#000000">OPTIMALITY: 100%</text>
+  <text x="840" y="292" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700" fill="#000000">STATUS: PRODUCTION READY</text>
 
-  <!-- ================= HERO CONTENT & TYPOGRAPHY ================= -->
+  <!-- ================= MAIN CONTENT & PROFESSIONAL TYPOGRAPHY ================= -->
 
   <!-- Top Metadata Breadcrumb -->
-  <text x="125" y="86" font-family="monospace" font-size="11" font-weight="700" fill="{lcars_amber}" letter-spacing="2">
-    USS ENTERPRISE // ADVANCED QUANTITATIVE SYSTEMS
+  <text x="124" y="84" font-family="ui-monospace, monospace" font-size="11.5" font-weight="700" fill="{lcars_amber}" letter-spacing="2">
+    LCARS ADVANCED ANALYTICS DIRECTORY // SECTOR 001
   </text>
 
-  <!-- Candidate Name -->
-  <text x="125" y="130" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="38" font-weight="900" fill="{text_primary}" letter-spacing="2.5">
+  <!-- Full Candidate Name -->
+  <text x="124" y="128" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="38" font-weight="900" fill="{text_primary}" letter-spacing="2">
     SEBASTIÁN AYALA
   </text>
 
-  <!-- Professional Sub-Title -->
-  <text x="126" y="160" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="17" font-weight="700" fill="{text_accent}" letter-spacing="1">
+  <!-- Professional Title -->
+  <text x="125" y="158" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="16.5" font-weight="700" fill="{text_accent}" letter-spacing="1">
     PHYSICIST &amp; DATA SCIENTIST  ·  OPERATIONS RESEARCH &amp; APPLIED ML
   </text>
 
-  <!-- Core Proposition / Mission statement -->
-  <text x="126" y="188" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="{text_secondary}">
-    Transforming complex physical systems &amp; operational entropy into deterministic, optimal business decisions.
+  <!-- Concise Professional Summary -->
+  <text x="125" y="186" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="{text_secondary}">
+    Applying the mathematical rigor of complex physical systems to mixed-integer linear programming (MILP),
+  </text>
+  <text x="125" y="204" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="{text_secondary}">
+    pricing dispersion modeling, and high-scale operational decision support.
   </text>
 
-  <!-- Pill Specialization Badges -->
-  <!-- Pill 1: MILP -->
-  <g transform="translate(126, 210)">
-    <rect width="180" height="28" rx="14" fill="{tag_bg}" stroke="{tag_border}" stroke-width="1.2"/>
-    <text x="14" y="18" font-family="monospace" font-size="11" font-weight="700" fill="{tag_text}">📐 MILP &amp; SciPy HiGHS</text>
+  <!-- Professional Capability Badges -->
+  <!-- Pill 1: MILP Optimization -->
+  <g transform="translate(125, 222)">
+    <rect width="186" height="28" rx="6" fill="{pill_bg}" stroke="{pill_border}" stroke-width="1.2"/>
+    <text x="14" y="18" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="{pill_text}">📐 MILP &amp; SciPy HiGHS</text>
   </g>
 
   <!-- Pill 2: Complex Systems -->
-  <g transform="translate(316, 210)">
-    <rect width="215" height="28" rx="14" fill="{tag_bg}" stroke="{tag_border}" stroke-width="1.2"/>
-    <text x="14" y="18" font-family="monospace" font-size="11" font-weight="700" fill="{tag_text}">⚛️ Complex Systems &amp; Monte Carlo</text>
+  <g transform="translate(321, 222)">
+    <rect width="210" height="28" rx="6" fill="{pill_bg}" stroke="{pill_border}" stroke-width="1.2"/>
+    <text x="14" y="18" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="{pill_text}">⚛️ Complex Physical Systems</text>
   </g>
 
-  <!-- Pill 3: Supply Chain -->
-  <g transform="translate(541, 210)">
-    <rect width="195" height="28" rx="14" fill="{tag_bg}" stroke="{tag_border}" stroke-width="1.2"/>
-    <text x="14" y="18" font-family="monospace" font-size="11" font-weight="700" fill="{tag_text}">📊 Supply Chain &amp; Pricing Models</text>
+  <!-- Pill 3: Supply Chain & Pricing -->
+  <g transform="translate(541, 222)">
+    <rect width="195" height="28" rx="6" fill="{pill_bg}" stroke="{pill_border}" stroke-width="1.2"/>
+    <text x="14" y="18" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="{pill_text}">📊 Supply Chain &amp; Pricing</text>
   </g>
 
-  <!-- ================= STARFLEET ARTWORK (RIGHT WING) ================= -->
-  <!-- Starfleet Command Delta Insignia Vector -->
-  <g transform="translate(850, 150) scale(0.95)" filter="url(#glow-{theme})">
-    <!-- Orbital trajectory rings -->
-    <ellipse cx="0" cy="0" rx="75" ry="32" fill="none" stroke="{lcars_cyan}" stroke-width="1.2" stroke-dasharray="4,3" transform="rotate(-25)"/>
-    <ellipse cx="0" cy="0" rx="90" ry="22" fill="none" stroke="{lcars_amber}" stroke-width="1" stroke-dasharray="2,4" transform="rotate(35)"/>
+  <!-- ================= TECHNICAL GRAPHIC: VECTOR MATHEMATICAL CONVERGENCE ================= -->
+  <g transform="translate(850, 155)">
+    <!-- Mathematical Coordinate Rings / Pareto Frontier -->
+    <ellipse cx="0" cy="0" rx="72" ry="32" fill="none" stroke="{lcars_cyan}" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7" transform="rotate(-20)"/>
+    <ellipse cx="0" cy="0" rx="84" ry="24" fill="none" stroke="{lcars_amber}" stroke-width="1" stroke-dasharray="2,4" opacity="0.6" transform="rotate(35)"/>
     
-    <!-- Outer Starfleet Delta Frame -->
-    <path d="M 0 -65 
-             C 18 -15, 42 25, 48 55 
-             C 32 45, 10 40, 0 46 
-             C -10 40, -32 45, -48 55 
-             C -42 25, -18 -15, 0 -65 Z" 
-          fill="url(#delta-grad-{theme})" stroke="{lcars_gold}" stroke-width="2"/>
-    
-    <!-- Inner Science Division Emblem (Two interlocking ellipses / atom symbol) -->
-    <ellipse cx="0" cy="0" rx="14" ry="7" fill="none" stroke="#000000" stroke-width="2.5" transform="rotate(-30)"/>
-    <ellipse cx="0" cy="0" rx="14" ry="7" fill="none" stroke="#000000" stroke-width="2.5" transform="rotate(30)"/>
-    <circle cx="0" cy="0" r="3" fill="#000000"/>
+    <!-- Geometric Starfleet Science Delta (Clean Precision Vector) -->
+    <path d="M 0 -58 
+             C 16 -12, 38 24, 44 50 
+             C 28 42, 10 38, 0 42 
+             C -10 38, -28 42, -44 50 
+             C -38 24, -16 -12, 0 -58 Z" 
+          fill="url(#delta-grad-{theme})" stroke="{lcars_gold}" stroke-width="1.8"/>
+
+    <!-- Inner Mathematical Optimization Vector Symbol (Convergence Point) -->
+    <circle cx="0" cy="8" r="4" fill="{lcars_cyan}"/>
+    <circle cx="0" cy="8" r="10" fill="none" stroke="{lcars_cyan}" stroke-width="1.2" opacity="0.8"/>
   </g>
 
-  <!-- Decorative Telemetry Lines and Crosshairs -->
-  <line x1="745" y1="95" x2="775" y2="95" stroke="{lcars_cyan}" stroke-width="1.5" opacity="0.6"/>
-  <line x1="760" y1="80" x2="760" y2="110" stroke="{lcars_cyan}" stroke-width="1.5" opacity="0.6"/>
-  <text x="740" y="125" font-family="monospace" font-size="9" font-weight="700" fill="{lcars_cyan}" opacity="0.75">GRID: SECTOR 001</text>
-  <text x="740" y="137" font-family="monospace" font-size="9" font-weight="700" fill="{lcars_cyan}" opacity="0.75">SCAN: OPTIMAL</text>
+  <!-- Telemetry Readouts (Right Column) -->
+  <g transform="translate(735, 95)" opacity="0.85">
+    <line x1="0" y1="0" x2="25" y2="0" stroke="{lcars_cyan}" stroke-width="1.2"/>
+    <line x1="0" y1="0" x2="0" y2="25" stroke="{lcars_cyan}" stroke-width="1.2"/>
+    <text x="32" y="12" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="{lcars_cyan}">CONVERGENCE: EXACT</text>
+    <text x="32" y="24" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="{lcars_cyan}">DUAL GAP: 0.00%</text>
+  </g>
 
 </svg>"""
     return svg

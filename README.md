@@ -5,7 +5,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg">
-    <img src="assets/banner-dark.svg" width="960" alt="Sebastián Ayala - Star Trek LCARS Banner">
+    <img src="assets/banner-dark.svg" width="960" alt="Sebastián Ayala - Star Trek LCARS Quantitative Profile">
   </picture>
 </a>
 
@@ -14,20 +14,23 @@
 
 <!-- LCARS DYNAMIC TYPING TERMINAL -->
 <a href="https://github.com/ayalaphysds">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&amp;weight=700&amp;size=24&amp;duration=2800&amp;pause=1000&amp;color=FF9900&amp;center=true&amp;vCenter=true&amp;width=920&amp;lines=Sebasti%C3%A1n+Ayala+%E2%80%94+Physicist+%26+Data+Scientist;Operations+Research+%E2%80%A2+MILP+Optimization+%E2%80%A2+SciPy+%26+HiGHS;Complex+Systems+%E2%80%A2+Prescriptive+Analytics+%E2%80%A2+Applied+ML;To+Boldly+Optimize+Where+No+Data+Has+Gone+Before+%F0%9F%96%96" alt="Star Trek LCARS Terminal - Sebastián Ayala">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&amp;weight=700&amp;size=24&amp;duration=2800&amp;pause=1000&amp;color=F59E0B&amp;center=true&amp;vCenter=true&amp;width=920&amp;lines=Sebasti%C3%A1n+Ayala+%E2%80%94+Physicist+%26+Data+Scientist;Operations+Research+%E2%80%A2+MILP+Optimization+%E2%80%A2+SciPy+%26+HiGHS;Complex+Systems+%E2%80%A2+Prescriptive+Analytics+%E2%80%A2+Applied+ML;Mathematical+Rigor+%E2%80%A2+Deterministic+Optimality" alt="Star Trek LCARS Terminal - Sebastián Ayala">
 </a>
 
 <br>
 
-<!-- STARFLEET TELEMETRY & TRAFFIC -->
-<img src="https://komarev.com/ghpvc/?username=ayalaphysds&style=flat-square&color=ff9900&label=STARFLEET+SUBSPACE+TRAFFIC" alt="Starfleet Subspace Traffic">&nbsp;&nbsp;
-<img src="https://img.shields.io/badge/STARFLEET%20STATUS-ONLINE%20%7C%20WARP%209.8-38BDF8?style=flat-square&logo=spacex&logoColor=white" alt="Starfleet Status">
+<!-- TELEMETRY VISITOR COUNTER & SYSTEM STATUS -->
+<a href="https://github.com/ayalaphysds">
+  <img src="https://api.visitorbadge.io/api/visitors?path=ayalaphysds.profile&amp;label=TELEMETRY%20VISITS&amp;labelColor=0f172a&amp;countColor=f59e0b&amp;style=flat-square" alt="Telemetry Profile Visits">
+</a>&nbsp;&nbsp;
+<img src="https://img.shields.io/badge/SYSTEM%20STATUS-OPTIMAL%20%7C%20CONVERGED-10B981?style=flat-square" alt="System Status">&nbsp;&nbsp;
+<img src="https://img.shields.io/badge/CLEARANCE-ALPHA%201-38BDF8?style=flat-square" alt="Clearance">
 
 </div>
 
 ---
 
-## 🖖 LCARS://PERSONNEL-DOSSIER.LOG
+## 🖖 LCARS://EXECUTIVE-DOSSIER.LOG
 
 <p align="center">
   <picture>
@@ -37,7 +40,7 @@
   </picture>
 </p>
 
-<p align="center"><sub><code>subspace_record: federation_science_division · designation: SA-704-PHYS · status: active</code></sub></p>
+<p align="center"><sub><code>subspace_record: quantitative_science_division · designation: SA-704-PHYS · status: verified</code></sub></p>
 
 <br>
 
@@ -61,9 +64,9 @@
         <sub><code>Python 3.11+ · SciPy Core · NumPy · Monte Carlo · Statistical Mechanics · Differential Equations</code></sub>
       </td>
       <td width="50%" valign="top"><code>├─ 📐 operations_research_milp:</code><br><br>
-        <img src="https://img.shields.io/badge/HiGHS-Solver-FF9900?style=for-the-badge&logoColor=black" height="32" alt="HiGHS Solver">
+        <img src="https://img.shields.io/badge/HiGHS-Solver-F59E0B?style=for-the-badge&logoColor=black" height="32" alt="HiGHS Solver">
         <img src="https://img.shields.io/badge/MILP-Optimization-38BDF8?style=for-the-badge&logoColor=black" height="32" alt="MILP">
-        <img src="https://img.shields.io/badge/Linear-Programming-CC6699?style=for-the-badge&logoColor=white" height="32" alt="LP"><br><br>
+        <img src="https://img.shields.io/badge/Linear-Programming-8B5CF6?style=for-the-badge&logoColor=white" height="32" alt="LP"><br><br>
         <sub><code>SciPy HiGHS Solver · MILP Formulation · Multi-provider Capacity Allocation · Duality Analysis</code></sub>
       </td>
     </tr>
@@ -71,7 +74,7 @@
       <td valign="top"><code>├─ 🧠 applied_ml_data_science:</code><br><br>
         <img src="https://skillicons.dev/icons?i=sklearn" height="42" alt="Scikit-Learn">
         <img src="https://cdn.simpleicons.org/pandas/150458?viewbox=auto" height="40" alt="Pandas">
-        <img src="https://img.shields.io/badge/Prescriptive-Analytics-4ADE80?style=for-the-badge&logoColor=black" height="32" alt="Prescriptive Analytics"><br><br>
+        <img src="https://img.shields.io/badge/Prescriptive-Analytics-10B981?style=for-the-badge&logoColor=black" height="32" alt="Prescriptive Analytics"><br><br>
         <sub><code>Scikit-Learn · Pandas · Feature Engineering · Statistical Learning · Time Series Forecasting</code></sub>
       </td>
       <td valign="top"><code>├─ 📊 interactive_telemetry_dashboards:</code><br><br>
@@ -88,7 +91,7 @@
       </td>
       <td valign="top"><code>╰─ 🏛️ architecture_data_persistence:</code><br><br>
         <img src="https://skillicons.dev/icons?i=postgres,mysql" height="42" alt="PostgreSQL, MySQL">
-        <img src="https://img.shields.io/badge/Clean-Architecture-FFCC00?style=for-the-badge&logoColor=black" height="32" alt="Clean Architecture">
+        <img src="https://img.shields.io/badge/Clean-Architecture-FBBF24?style=for-the-badge&logoColor=black" height="32" alt="Clean Architecture">
         <img src="https://img.shields.io/badge/CI%2FCD-Pipelines-38BDF8?style=for-the-badge&logoColor=black" height="32" alt="CI/CD"><br><br>
         <sub><code>SQL Relational Data · Clean Architecture · Modular Pipeline Design · Unit Testing (pytest)</code></sub>
       </td>
@@ -96,7 +99,7 @@
   </tbody>
   <tfoot>
     <tr>
-      <td colspan="2"><code>telemetry: operational&nbsp;&nbsp;·&nbsp;&nbsp;warp_core: nominal (9.8)&nbsp;&nbsp;·&nbsp;&nbsp;clearance: alpha-1</code></td>
+      <td colspan="2"><code>telemetry: operational&nbsp;&nbsp;·&nbsp;&nbsp;solver_gap: 0.00% (exact)&nbsp;&nbsp;·&nbsp;&nbsp;clearance: alpha-1</code></td>
     </tr>
   </tfoot>
 </table>
@@ -185,13 +188,13 @@
 
 ---
 
-## 📊 LCARS://SUBSPACE-TELEMETRY
+## 📊 LCARS://SYSTEM-TELEMETRY
 
 <div align="center">
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ayalaphysds&show_icons=true&title_color=ff9900&text_color=cbd5e1&icon_color=38bdf8&bg_color=0d1117&border_color=ff9900&hide_border=false" alt="Estadísticas de GitHub de Sebastián Ayala" height="175">&nbsp;
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ayalaphysds&layout=compact&title_color=ff9900&text_color=cbd5e1&bg_color=0d1117&border_color=38bdf8&hide_border=false" alt="Lenguajes más usados de Sebastián Ayala" height="175">
+  <img src="https://github-readme-stats.vercel.app/api?username=ayalaphysds&show_icons=true&title_color=f59e0b&text_color=cbd5e1&icon_color=38bdf8&bg_color=0d1117&border_color=f59e0b&hide_border=false" alt="Estadísticas de GitHub de Sebastián Ayala" height="175">&nbsp;
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ayalaphysds&layout=compact&title_color=f59e0b&text_color=cbd5e1&bg_color=0d1117&border_color=38bdf8&hide_border=false" alt="Lenguajes más usados de Sebastián Ayala" height="175">
 </p>
 
 </div>
@@ -206,7 +209,7 @@
 <p><em>¿Interesado en resolver desafíos complejos de optimización, modelado cuantitativo o ciencia de datos aplicada? Abramos canal de comunicación:</em></p>
 
 <a href="mailto:ayala.phys.ds@gmail.com">
-  <img src="https://img.shields.io/badge/Subspace_Email-ayala.phys.ds@gmail.com-FF9900?style=for-the-badge&logo=gmail&logoColor=black" alt="Email">
+  <img src="https://img.shields.io/badge/Subspace_Email-ayala.phys.ds@gmail.com-F59E0B?style=for-the-badge&logo=gmail&logoColor=black" alt="Email">
 </a>&nbsp;&nbsp;
 <a href="https://www.linkedin.com/in/ayalaphysds">
   <img src="https://img.shields.io/badge/LinkedIn-Sebasti%C3%A1n_Ayala-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
@@ -215,7 +218,7 @@
   <img src="https://img.shields.io/badge/GitHub-ayalaphysds-38BDF8?style=for-the-badge&logo=github&logoColor=black" alt="GitHub">
 </a>&nbsp;&nbsp;
 <a href="https://github.com/ayalaphysds/Repositorio-Empresas">
-  <img src="https://img.shields.io/badge/Fleet_Repo-Repositorio--Empresas-CC6699?style=for-the-badge&logo=git&logoColor=white" alt="Repositorio Empresas">
+  <img src="https://img.shields.io/badge/Enterprise_Hub-Repositorio--Empresas-8B5CF6?style=for-the-badge&logo=git&logoColor=white" alt="Repositorio Empresas">
 </a>
 
 <br>
@@ -223,7 +226,7 @@
 
 <p>
   <sub><em>"Logic is the beginning of wisdom, not the end."</em> — Spock 🖖</sub><br>
-  <sub><b>Starfleet Command · Division of Advanced Analytics · Sector 001 · Cauquenes, Chile 🇨🇱</b></sub>
+  <sub><b>Division of Advanced Quantitative Analytics · Cauquenes, Chile 🇨🇱 · LatAm / Global Remote</b></sub>
 </p>
 
 </div>
