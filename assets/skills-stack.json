@@ -1,0 +1,34 @@
+{
+  "title": "TECHNICAL & SCIENTIFIC LANGUAGE STACK",
+  "_comment": "Starfleet Science Division - Computational Stack Competencies (0-100)",
+  "axes": [
+    {
+      "label": "Python (Scientific/Core)",
+      "value": 95
+    },
+    {
+      "label": "SciPy & HiGHS Solver",
+      "value": 92
+    },
+    {
+      "label": "NumPy & Vectorization",
+      "value": 94
+    },
+    {
+      "label": "Pandas & Data Modeling",
+      "value": 92
+    },
+    {
+      "label": "Streamlit & Plotly",
+      "value": 90
+    },
+    {
+      "label": "SQL & Data Pipelines",
+      "value": 86
+    },
+    {
+      "label": "Bash, Linux & Git",
+      "value": 88
+    }
+  ]
+}

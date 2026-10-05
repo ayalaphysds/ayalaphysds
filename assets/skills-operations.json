@@ -1,0 +1,30 @@
+{
+  "title": "OPERATIONS RESEARCH & QUANTITATIVE MATRIX",
+  "_comment": "Starfleet Science Division - Operational Research & Mathematical Competencies (0-100)",
+  "axes": [
+    {
+      "label": "MILP & Linear Programming",
+      "value": 94
+    },
+    {
+      "label": "Complex Systems & Physics",
+      "value": 95
+    },
+    {
+      "label": "Prescriptive Analytics",
+      "value": 92
+    },
+    {
+      "label": "Supply Chain Optimization",
+      "value": 90
+    },
+    {
+      "label": "Applied Machine Learning",
+      "value": 88
+    },
+    {
+      "label": "Monte Carlo & Stochastic",
+      "value": 89
+    }
+  ]
+}
